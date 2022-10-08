@@ -12,9 +12,12 @@ function View() {
   useEffect(() => {
     const fetchImages = async () => {
       console.log(`/view/${id}`);
-      const res = await fetch(`http://localhost:4000/api/retreive/${id}`, {
-        method: "GET",
-      });
+      const res = await fetch(
+        `https://photography-5stack-gallery.herokuapp.com/api/retreive/${id}`,
+        {
+          method: "GET",
+        }
+      );
       if (res.ok) {
         const data = await res.json();
         if (data.length != 0) {

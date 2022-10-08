@@ -26,11 +26,15 @@ export default function UploadModal() {
     const formData = new FormData();
     formData.append("category", category);
     formData.append("images", file);
-    const res = await axios.post("http://localhost:4000/api/upload", formData, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
+    const res = await axios.post(
+      "https://photography-5stack-gallery.herokuapp.com/api/upload",
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
     const data = res.data;
     notify(data.message);
     setBasicModal(false);

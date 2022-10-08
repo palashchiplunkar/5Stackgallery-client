@@ -72,7 +72,7 @@ const Gallery = ({ galleryImages }) => {
           />
           <div className='fullScreenImage'>
             <img
-              src={`http://localhost:4000/uploads/${galleryImages[slideNumber].imgName}`}
+              src={`https://photography-5stack-gallery.herokuapp.com/uploads/${galleryImages[slideNumber].imgName}`}
               alt=''
             />
           </div>
@@ -87,7 +87,9 @@ const Gallery = ({ galleryImages }) => {
                 <a
                   href='#'
                   onClick={() =>
-                    filesaver(`http://localhost:4000/uploads/${slide.imgName}`)
+                    filesaver(
+                      `https://photography-5stack-gallery.herokuapp.com/uploads/${slide.imgName}`
+                    )
                   }
                   style={{ textDecoration: "none", color: "white" }}>
                   <svg
@@ -106,7 +108,7 @@ const Gallery = ({ galleryImages }) => {
                   key={index}
                   onClick={() => handleOpenModal(index)}>
                   <img
-                    src={`http://localhost:4000/uploads/${slide.imgName}`}
+                    src={`https://photography-5stack-gallery.herokuapp.com/uploads/${slide.imgName}`}
                     alt=''
                   />
                 </div>

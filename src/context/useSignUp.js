@@ -9,17 +9,20 @@ export const useSignUp = () => {
     setloading(true);
     seterror(null);
 
-    const response = await fetch("http://localhost:4000/api/register", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        password,
-      }),
-    });
+    const response = await fetch(
+      "https://photography-5stack-gallery.herokuapp.com/api/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          password,
+        }),
+      }
+    );
     const data = await response.json();
 
     if (!response.ok) {
