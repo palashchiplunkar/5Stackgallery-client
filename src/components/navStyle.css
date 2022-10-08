@@ -1,0 +1,55 @@
+.heading {
+  display: inline;
+  color: white;
+  font-size: 2em;
+}
+.heading1 {
+  color: #f58f7c;
+}
+#nav-text-white {
+  color: white;
+  font-size: 1.2em;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+#nav-text {
+  color: #f58f7c;
+  font-size: 1.2em;
+}
+.nav-links {
+  margin-right: 10%;
+}
+
+.navbar-toggler {
+  border-color: white !important;
+}
+.button {
+  margin-left: 1em;
+}
+.auth {
+  margin-left: 2em;
+}
+.auth1 {
+  margin-bottom: 0;
+  margin-left: 2em;
+}
+.user {
+  margin-top: 0.6em;
+}
+@media only screen and (max-width: 1200px) {
+  #nav-text-white {
+    color: white;
+    font-size: 1.2em;
+    border: none;
+  }
+  .button {
+    margin-left: 0;
+  }
+  .auth {
+    margin-left: 0;
+  }
+  .auth1 {
+    margin-bottom: 2em;
+    margin-left: 0;
+  }
+}
